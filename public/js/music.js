@@ -42,7 +42,6 @@ btn.addEventListener('submit', async (e) => {
   title.value = ``;
   elem.innerHTML = ``;
   const data = await responce.json();
-  console.log(data);
   for (let key in data) {
     const url = data[key][1].artist.picture_big;
     const div = document.createElement('div');
@@ -73,7 +72,6 @@ btn.addEventListener('submit', async (e) => {
         if (nameSong.value.toLowerCase() === key.toLowerCase()) {
           audioMod = obj[key];
         }
-        console.log(audioMod);
       }
       let err = filterMusic.map((el) => el.toLowerCase());
       if (err.indexOf(nameSong.value.toLowerCase()) == -1) {
